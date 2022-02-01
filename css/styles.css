@@ -1,0 +1,143 @@
+body {
+  font-family: 'Ubuntu',  'Trebuchet MS', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #FFF;
+  background: #121A39;
+  margin: 0;
+}
+
+/* TYPOGRAPHY */
+ul {
+  list-style:  none;
+  text-transform:  uppercase;
+  font-weight:  700;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 10px;
+  color:  #FFF;
+}
+
+a:hover,
+a:focus {
+  color: #F8C026;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+button {
+  background: #B79047;
+  padding: 10px 25px;
+  border: solid 1px #121A39;
+  border-radius: 5%;
+}
+
+/* TODO: Goes on top of carousel on smaller screens - fix*/
+.carousel-action button {
+  background: none;
+  color: #B79047;
+  border: 0;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+/* LAYOUT */
+header {
+  padding: 20px 0;
+}
+
+li {
+  display:  inline;
+  float: right;
+  margin-right: 50px;
+}
+
+nav, 
+.bike-carousel{
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.bike-carousel,
+.carousel-item-hidden {
+  display:  none;
+}
+
+.info {
+  padding: 20px 30px;
+  margin-right: 10px;
+}
+
+.carousel-item-visible,
+.carousel-action {
+  display:  flex;
+  justify-content: space-between;
+  top: 50%;
+  position: absolute;
+}
+
+.carousel-item-visible {
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  animation: slider 5s;
+}
+
+.carousel-action {
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+#modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color:  #121A39;
+  background:  antiquewhite;
+  line-height: 0.25em;
+}
+
+#modal button {
+  background:  none;
+  color:  #121A39;
+  font-size:  20px;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  border: none;
+}
+
+.container {
+  width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+  font-size:  20px;
+  padding: 20px;
+  animation: slider 2s;
+}
+
+@keyframes slider {
+  0% { 
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
